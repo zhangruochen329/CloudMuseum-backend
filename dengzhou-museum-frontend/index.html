@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登州博物馆 · 云端漫游 | DENGZHOU MUSEUM</title>
+</head>
+<body>
+
+    <!-- ==================== 左侧导航栏 ==================== -->
+    <nav class="side-nav">
+        <div class="nav-logo">DENGZHOU<br>MUSEUM</div>
+        <ul class="nav-menu">
+            <li class="nav-item active" data-section="home">首页 HOME</li>
+            <li class="nav-item" data-section="history">馆舍概况 MUSEUM</li>
+            <li class="nav-item" data-section="relics">镇馆之宝 TREASURES</li>
+            <li class="nav-item" data-section="tour">资讯公告 NOTICES</li>
+            <li class="nav-item" data-section="education">研学中心 EDU</li>
+        </ul>
+        <div class="nav-footer" style="padding:0 28px; font-size:10px; color:var(--text-secondary);">
+            &copy; 2026 DENGZHOU MUSEUM
+        </div>
+    </nav>
+
+    <!-- ==================== 主内容区 ==================== -->
+    <main class="main-content">
+
+        <!-- ========== S1: 首页 Hero（360°全景VR） ========== -->
+        <section id="section-home" class="section section-pano">
+            <!-- 加载动画 -->
+            <div id="pano-loading" class="pano-loading">
+                <div class="pano-spinner"></div>
+                <div class="pano-loader-text" id="pano-loader-text">加载场景...</div>
+            </div>
+            <!-- Three.js 渲染容器 -->
+            <div id="pano-container"></div>
+            <!-- 全景UI覆盖层 -->
+            <div class="pano-header">
+                <span class="pano-logo">⛩️ 蓬莱阁</span>
+                <button class="pano-fs-btn" id="pano-fs-btn" title="全屏">⛶</button>
+            </div>
+            <div class="pano-info">
+                <div class="pano-scene-name" id="pano-scene-name">蓬莱阁</div>
+                <div class="pano-scene-cat" id="pano-scene-cat">古建筑群</div>
+            </div>
+            <div class="pano-nav-btns">
+                <button class="pano-nav-btn" id="pano-prev">‹</button>
+                <button class="pano-nav-btn" id="pano-next">›</button>
+            </div>
+            <div class="pano-scene-bar" id="pano-scene-bar"></div>
+        </section>
+
+        <!-- ========== S2: 馆舍概况 ========== -->
+        <section id="section-history" class="section">
+            <div class="section-header fade-in-up">
+                <span class="section-label">MUSEUM</span>
+                <h2 class="section-title">馆舍概况</h2>
+                <p class="section-subtitle">千年古港 · 东方海上丝绸之路始发港</p>
+                <div class="section-divider">
+                    <span class="divider-cloud" viewBox="0 0 40 16">
+                        <svg width="40" height="16" viewBox="0 0 40 16" fill="none">
+                            <path d="M5 12 Q8 8 12 10 Q14 6 18 8 Q20 4 24 7 Q27 5 30 8 Q33 6 35 9" stroke="#c4a265" stroke-opacity="0.4" stroke-width="1" fill="none"/>
+                        </svg>
+                    </span>
+                    <span class="divider-icon">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><path d="M14 2C7.4 2 2 7.4 2 14s5.4 12 12 12 12-5.4 12-12S20.6 2 14 2zm0 20c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8z" fill="none" stroke="#c4a265" stroke-width="1"/><circle cx="14" cy="14" r="4" fill="#c4a265" opacity="0.4"/></svg>
+                    </span>
+                    <span class="divider-cloud right">
+                        <svg width="40" height="16" viewBox="0 0 40 16" fill="none">
+                            <path d="M5 12 Q8 8 12 10 Q14 6 18 8 Q20 4 24 7 Q27 5 30 8 Q33 6 35 9" stroke="#c4a265" stroke-opacity="0.4" stroke-width="1" fill="none"/>
+                        </svg>
+                    </span>
+                </div>
+            </div>
+            <div class="history-timeline" id="history-grid">
+                <p style="color:var(--text-secondary); text-align:center;">历史内容加载中...</p>
+            </div>
+        </section>
+
+        <!-- ========== S3: 镇馆之宝 ========== -->
+        <section id="section-relics" class="section">
+            <div class="section-header fade-in-up">
+                <span class="section-label">TREASURES</span>
+                <h2 class="section-title">镇馆之宝</h2>
+                <p class="section-subtitle">馆藏精品 · 穿越千年的历史见证</p>
+                <div class="section-divider">
+                    <span class="divider-cloud">
+                        <svg width="40" height="16" viewBox="0 0 40 16" fill="none">
+                            <path d="M5 12 Q8 8 12 10 Q14 6 18 8 Q20 4 24 7 Q27 5 30 8 Q33 6 35 9" stroke="#c4a265" stroke-opacity="0.4" stroke-width="1" fill="none"/>
+                        </svg>
+                    </span>
+                    <span class="divider-icon">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><rect x="4" y="6" width="20" height="16" rx="1" fill="none" stroke="#c4a265" stroke-width="1"/><line x1="10" y1="11" x2="18" y2="11" stroke="#c4a265" stroke-width="0.8" opacity="0.5"/><line x1="10" y1="15" x2="16" y2="15" stroke="#c4a265" stroke-width="0.8" opacity="0.5"/></svg>
+                    </span>
+                    <span class="divider-cloud right">
+                        <svg width="40" height="16" viewBox="0 0 40 16" fill="none">
+                            <path d="M5 12 Q8 8 12 10 Q14 6 18 8 Q20 4 24 7 Q27 5 30 8 Q33 6 35 9" stroke="#c4a265" stroke-opacity="0.4" stroke-width="1" fill="none"/>
+                        </svg>
+                    </span>
+                </div>
+            </div>
+            <div class="relic-grid fade-in-up delay-1" id="relic-grid" style="margin-top:40px;">
+                <p style="color:var(--text-secondary); grid-column:1/-1; text-align:center;">文物数据加载中...</p>
+            </div>
+            <div id="relic-pagination"></div>
+        </section>
+
+        <!-- ========== S4: 资讯公告 ========== -->
+        <section id="section-tour" class="section">
+            <div class="section-header fade-in-up">
+                <span class="section-label" style="color:var(--neon-cyan);">NOTICES</span>
+                <h2 class="section-title">资讯公告</h2>
+                <p class="section-subtitle">实时位置 · 天气 · 人流量多维分析</p>
+                <div class="section-divider">
+                    <span class="divider-cloud">
+                        <svg width="40" height="16" viewBox="0 0 40 16" fill="none">
+                            <path d="M5 8 Q8 4 12 6 Q14 2 18 5 Q20 1 24 4 Q27 2 30 5 Q33 3 35 6" stroke="#5ba0b8" stroke-opacity="0.4" stroke-width="1" fill="none"/>
+                        </svg>
+                    </span>
+                    <span class="divider-icon">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="10" r="3" fill="none" stroke="#5ba0b8" stroke-width="1"/><path d="M14 13c-4 6-8 9-8 9h16s-4-3-8-9z" fill="none" stroke="#5ba0b8" stroke-width="1"/></svg>
+                    </span>
+                    <span class="divider-cloud right">
+                        <svg width="40" height="16" viewBox="0 0 40 16" fill="none">
+                            <path d="M5 8 Q8 4 12 6 Q14 2 18 5 Q20 1 24 4 Q27 2 30 5 Q33 3 35 6" stroke="#5ba0b8" stroke-opacity="0.4" stroke-width="1" fill="none"/>
+                        </svg>
+                    </span>
+                </div>
+            </div>
+
+            <div class="tour-panels fade-in-up delay-1" style="margin-top:20px;">
+                <div class="card" style="text-align:center;">
+                    <div class="tour-card-icon">&#x1f4cd;</div>
+                    <div class="card-title" style="margin:0;">你的位置</div>
+                    <p id="user-location" style="color:var(--text-secondary); font-size:13px;">获取中...</p>
+                </div>
+                <div class="card" style="text-align:center;">
+                    <div class="tour-card-icon">&#x1f324;</div>
+                    <div class="card-title" style="margin:0;">实时天气</div>
+                    <p id="weather-info" style="color:var(--text-secondary); font-size:13px;">加载中...</p>
+                </div>
+                <div class="card" style="text-align:center;">
+                    <div class="tour-card-icon">&#x1f465;</div>
+                    <div class="card-title" style="margin:0;">人流量预测</div>
+                    <p id="crowd-info" style="color:var(--text-secondary); font-size:13px;">计算中...</p>
+                </div>
+                <div class="card" style="text-align:center;">
+                    <div class="tour-card-icon">&#x1f3ab;</div>
+                    <div class="card-title" style="margin:0;">票务信息</div>
+                    <p style="color:var(--text-secondary); font-size:13px;">免费参观（需预约）</p>
+                </div>
+            </div>
+            <div id="notice-list" class="fade-in-up delay-1" style="margin-top:24px;">
+                <div style="text-align:center;padding:40px;color:var(--text-secondary);font-size:13px;">加载中...</div>
+            </div>
+        </section>
+
+        <!-- ========== S5: 研学中心 ========== -->
+        <section id="section-education" class="section">
+            <div class="section-header fade-in-up">
+                <span class="section-label" style="color:var(--neon-cyan);">EDUCATION</span>
+                <h2 class="section-title">研学中心</h2>
+                <p class="section-subtitle">中小学研学旅行 &middot; 沉浸式历史文化课堂</p>
+                <div class="section-divider">
+                    <span class="divider-cloud">
+                        <svg width="40" height="16" viewBox="0 0 40 16" fill="none">
+                            <path d="M5 8 Q8 4 12 6 Q14 2 18 5 Q20 1 24 4 Q27 2 30 5 Q33 3 35 6" stroke="#5ba0b8" stroke-opacity="0.4" stroke-width="1" fill="none"/>
+                        </svg>
+                    </span>
+                    <span class="divider-icon">
+                        <svg width="28" height="28" viewBox="0 0 28 28"><path d="M4 6h20v16H4z" fill="none" stroke="#5ba0b8" stroke-width="1"/><line x1="8" y1="11" x2="20" y2="11" stroke="#5ba0b8" stroke-width="0.8" opacity="0.5"/><line x1="8" y1="15" x2="16" y2="15" stroke="#5ba0b8" stroke-width="0.8" opacity="0.5"/><circle cx="22" cy="20" r="4" fill="#5ba0b8" opacity="0.2" stroke="#5ba0b8" stroke-width="1"/></svg>
+                    </span>
+                    <span class="divider-cloud right">
+                        <svg width="40" height="16" viewBox="0 0 40 16" fill="none">
+                            <path d="M5 8 Q8 4 12 6 Q14 2 18 5 Q20 1 24 4 Q27 2 30 5 Q33 3 35 6" stroke="#5ba0b8" stroke-opacity="0.4" stroke-width="1" fill="none"/>
+                        </svg>
+                    </span>
+                </div>
+            </div>
+
+            <div style="margin-top:32px;">
+                <h3 style="font-family:var(--font-display);font-size:16px;letter-spacing:2px;color:var(--gold);margin-bottom:16px;">研学动态</h3>
+                <div id="edu-news-list">
+                    <div style="text-align:center;padding:40px;color:var(--text-secondary);font-size:13px;">加载中...</div>
+                </div>
+            </div>
+
+            <div class="edu-grid" style="margin-top:32px;">
+                <div class="card fade-in-up delay-2" style="text-align:center;">
+                    <div class="edu-icon">&#x1f4da;</div>
+                    <div class="card-title">研学课程</div>
+                    <p style="color:var(--text-secondary); font-size:13px;">
+                        "海上丝路探秘"<br>"抗倭英雄·戚继光文化"<br>"文物鉴赏与历史"
+                    </p>
+                    <button class="btn-primary" style="margin-top:16px;" onclick="window.showCoursesModal()">了解课程</button>
+                </div>
+                <div class="card fade-in-up delay-3" style="text-align:center;">
+                    <div class="edu-icon">&#x1f3eb;</div>
+                    <div class="card-title">团体预约</div>
+                    <p style="color:var(--text-secondary); font-size:13px;">
+                        中小学团体参观预约<br>专属导览服务<br>研学活动定制
+                    </p>
+                    <button class="btn-primary" style="margin-top:16px;" onclick="window.showReservationModal()">立即预约</button>
+                </div>
+                <div class="card fade-in-up delay-4" style="text-align:center;">
+                    <div class="edu-icon">&#x1f465;</div>
+                    <div class="card-title">招募报名</div>
+                    <p style="color:var(--text-secondary); font-size:13px;">
+                        志愿者招募<br>活动参与者招募<br>填写个人信息报名
+                    </p>
+                    <button class="btn-primary" style="margin-top:16px;" onclick="window.showRecruitmentModal()">立即报名</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==================== 页脚 ==================== -->
+    <footer class="site-footer">
+        <div class="footer-left">DENGZHOU MUSEUM</div>
+        <div class="footer-right">
+            登州博物馆<span>|</span>蓬莱 · 烟台<span>|</span>联系电话：0535-5668021<span>|</span>东方海上丝绸之路始发港
+        </div>
+    </footer>
+
+    <!-- 浮动按钮 - 3D 数字人入口 -->
+    <div class="float-dengzhou" onclick="window.toggleDengzhouChat()" title="登州小吏">
+        <div class="float-dengzhou-inner" id="digitalHumanContainer">
+            <span class="float-dengzhou-icon">&#x1f3db;</span>
+        </div>
+    </div>
+
+    <!-- JS模块引入 -->
+    <script type="module" src="/src/main.js"></script>
+    <!-- 网站浏览统计 -->
+    <script>
+    (function() {
+        fetch('/api/visits/track', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ pagePath: window.location.pathname }),
+            keepalive: true
+        }).catch(function(){});
+    })();
+    </script>
+</body>
+</html>

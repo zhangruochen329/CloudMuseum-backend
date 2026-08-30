@@ -1,0 +1,18 @@
+{
+  "name": "dengzhou-museum-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "登州博物馆 · 云端漫游 前端",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "vite build && cp -r dist/* ../src/main/resources/static/ && echo '✅ 已部署到 Spring Boot static/'"
+  },
+  "devDependencies": {
+    "vite": "^6.0.0"
+  },
+  "dependencies": {
+    "three": "^0.184.0"
+  }
+}
