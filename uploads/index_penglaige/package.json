@@ -1,0 +1,24 @@
+{
+  "name": "penglai-pavilion-vr",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "crawl": "node scripts/crawl.mjs scenes",
+    "download:tiles": "node scripts/crawl.mjs tiles",
+    "stitch": "node scripts/crawl.mjs stitch",
+    "crawl:all": "node scripts/crawl.mjs all"
+  },
+  "dependencies": {
+    "three": "^0.170.0",
+    "vue": "^3.5.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.0",
+    "sharp": "^0.34.5",
+    "vite": "^6.0.0"
+  }
+}
