@@ -38,6 +38,11 @@ Thumbs.db
 
 ### Static uploads ###
 uploads/
+!uploads/
+!uploads/images/
+!uploads/images/relics/
+uploads/images/relics/*
+!uploads/images/relics/*.jpg
 
 ### Claude ###
 .claude/
